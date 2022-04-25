@@ -8,6 +8,7 @@ import Fonts from './sections/Fonts';
 import Layout from './sections/Layout';
 import RightNavbar from './RightNavbar';
 import Settings from './sections/Settings';
+import Actions from './sections/Actions';
 import Templates from './sections/Templates';
 import sections from '../../../data/rightSections';
 import SettingsContext from '../../../contexts/SettingsContext';
@@ -28,6 +29,8 @@ const getComponent = (id) => {
       return About;
     case 'font-size':
       return FontSize;
+    case 'actions':
+      return Actions;
     default:
       throw new Error();
   }

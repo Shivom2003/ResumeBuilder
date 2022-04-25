@@ -5,6 +5,7 @@ import {
   MdFormatSize,
   MdSettings,
   MdStyle,
+  MdArrowDropUp,
 } from 'react-icons/md';
 
 export default [
@@ -32,6 +33,11 @@ export default [
     id: 'settings',
     icon: MdSettings,
   },
+  {
+    id: 'actions',
+    icon: MdArrowDropUp,
+  },
+
   // {
   //   id: 'about',
   //   icon: MdInfo,

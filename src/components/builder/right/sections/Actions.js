@@ -11,9 +11,9 @@ import ModalContext from '../../../../contexts/ModalContext';
 const Actions = ({ id }) => {
   const { t } = useTranslation();
 
-  const [loadDemoText, setLoadDemoText] = useState(
-    t('builder.actions.loadDemoData.button'),
-  );
+  // const [loadDemoText, setLoadDemoText] = useState(
+  //   t('builder.actions.loadDemoData.button'),
+  // );
   const [resetText, setResetText] = useState(
     t('builder.actions.resetEverything.button'),
   );
@@ -35,16 +35,6 @@ const Actions = ({ id }) => {
   //     window && window.open(getSharableUrl());
   //   }
   // };
-
-  const handleLoadDemo = () => {
-    if (loadDemoText === t('builder.actions.loadDemoData.button')) {
-      setLoadDemoText(t('shared.buttons.confirmation'));
-      return;
-    }
-
-    dispatch({ type: 'load_demo_data' });
-    setLoadDemoText(t('builder.actions.loadDemoData.button'));
-  };
 
   const handleReset = () => {
     if (resetText === t('builder.actions.resetEverything.button')) {
@@ -84,7 +74,9 @@ const Actions = ({ id }) => {
         </div>
       </div>
 
-      <div className={styles.container}>
+      {/*
+    
+    <div className={styles.container}>
         <h5>{t('builder.actions.loadDemoData.button')}</h5>
 
         <p className="leading-loose">
@@ -95,6 +87,7 @@ const Actions = ({ id }) => {
           <Button onClick={handleLoadDemo}>{loadDemoText}</Button>
         </div>
       </div>
+    */}
 
       <div className={styles.container}>
         <h5>{t('builder.actions.resetEverything.button')}</h5>
